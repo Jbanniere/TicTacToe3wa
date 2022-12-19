@@ -37,9 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
      * 
      */
     const check = () => {
+        player.classList. remove("win")
         for (let i = 0; i < winGame.length; i++) {
             let gameCase = ["", "", ""]
-
+            
             if (box[winGame[i][0]].innerText === "X") {
                 gameCase[0] = true
             }
@@ -66,16 +67,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const whoWin = (first, second, third) => {
         if (first === true && second === true && third === true) {
             scoreX++
-            boxScoreX.innerText = scoreX
-            alert('Player X vous marquez un point !')
-            
+            boxScoreX.innerText = scoreXC
+            player.innerText = "Le player X a gagné !"
+            player.classList.add('win')
         }
 
         if (first === false && second === false && third === false) {
             scoreO++
             boxScoreO.innerText = scoreO
-            alert('Player O vous marquez un point !')
+            player.innerText = "Le player O a gagné !"
+            player.classList.add('win')
         }
+        
     }
 
 
@@ -88,12 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (element.innerText === "") {
             tour++
             if (tour % 2 === 1) {
-                player.innerText = "PLayer X à vous de jouer !"
+                player.innerText = "Player X à vous de jouer !"
                 element.innerText = "O"
 
             }
             else if (tour % 2 === 0) {
-                player.innerText = "PLayer O à vous de jouer !"
+                player.innerText = "Player O à vous de jouer !"
                 element.innerText = "X"
             }
             console.log(element)

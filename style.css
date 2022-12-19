@@ -24,6 +24,8 @@ h1 {
 
 #player {
     font-size:20px;
+    width:400px;
+    text-align:center;
 }
 
 button {
@@ -31,8 +33,6 @@ button {
     padding:0.5rem;
     margin-top:1rem;
 }
-
-
 
 #scoreX,
 #scoreO {
@@ -42,4 +42,10 @@ button {
 
 .score {
     font-size:15px;
+}
+
+.win  {
+    background-color: green;
+    color:white;
+    font-size:40px;
 }
