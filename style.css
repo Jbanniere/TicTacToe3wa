@@ -31,3 +31,15 @@ button {
     padding:0.5rem;
     margin-top:1rem;
 }
+
+
+
+#scoreX,
+#scoreO {
+    font-size : 30px;
+    color : red;
+}
+
+.score {
+    font-size:15px;
+}
